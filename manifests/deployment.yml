@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: goprasaddockerhelloworld 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: goprasaddockerhelloworld 
+    spec:
+      containers:
+        - name: goprasaddockerhelloworld 
+          image: prgorleacr.azurecr.io/goprasaddockerhelloworld
+          ports:
+          - containerPort: 80
